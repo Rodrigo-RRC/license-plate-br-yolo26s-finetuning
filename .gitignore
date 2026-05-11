@@ -1,0 +1,9 @@
+*.pt
+*.zip
+*.png
+*.jpg
+*.jpeg
+__pycache__/
+.venv/
+runs/
+dataset/
