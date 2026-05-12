@@ -121,7 +121,8 @@ python src/eval_por_tipo_best_placas.py
 │   ├── evolucao_genetica_hiperparametros.md
 │   ├── glossario_parametros.md
 │   ├── parametros_treino_original.md
-│   └── plano_fine_tuning.md
+│   ├── plano_fine_tuning.md
+│   └── evolucao_iou.png                  # Gráfico de evolução do IoU
 ├── UFPR-ALPR dataset/
 │   └── README.md                        # Instruções para obter o dataset
 ├── Dockerfile
