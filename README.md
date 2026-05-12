@@ -111,14 +111,19 @@ python src/eval_por_tipo_best_placas.py
 │   ├── fine_tuning_colab.py             # Fine-tuning no Google Colab
 │   ├── fine_tuning.py                   # Fine-tuning local/OCI
 │   ├── tune_colab.py                    # Busca genética no Colab
-│   └── tune_kaggle.py                   # Busca genética no Kaggle
+│   ├── tune_kaggle.py                   # Busca genética no Kaggle
+│   └── gerar_grafico.py                 # Geração de gráficos de evolução
 ├── Docs/
 │   ├── guia_colab.md
 │   ├── guia_kaggle.md
-│   └── evolucao_genetica_hiperparametros.md
+│   ├── evolucao_genetica_hiperparametros.md
+│   ├── glossario_parametros.md
+│   ├── parametros_treino_original.md
+│   └── plano_fine_tuning.md
 ├── UFPR-ALPR dataset/
 │   └── README.md                        # Instruções para obter o dataset
 ├── Dockerfile
+├── requirements.txt
 └── README.md
 ```
 
