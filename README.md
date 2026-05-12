@@ -8,6 +8,8 @@ partindo do modelo base YOLO26s, passando por fine-tuning supervisionado e chega
 
 ## Evolução do Modelo
 
+![Evolução do IoU](Docs/evolucao_iou.png)
+
 | Etapa | Modelo | mAP@50 | mAP@50-95 | IoU Geral |
 |---|---|---|---|---|
 | Baseline | number-plate-yolo26s | 83,11% | 45,00% | 68,60% |
@@ -145,4 +147,5 @@ AGPL-3.0 — herdada do modelo base de Muhammad Rizwan Munawar.
 
 ## Autor
 
-Rodrigo Ribeiro Carvalho
+Rodrigo Ribeiro Carvalho  
+[GitHub](https://github.com/Rodrigo-RRC) · [HuggingFace](https://huggingface.co/RodrigoRRC)
