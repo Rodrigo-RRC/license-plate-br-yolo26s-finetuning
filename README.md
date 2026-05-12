@@ -66,10 +66,25 @@ docker run -v $(pwd)/UFPR-ALPR\ dataset:/app/dataset license-plate-br
 
 ### Direto com Python
 
+**1. Instalar dependências**
+
 ```bash
-pip install ultralytics
-python src/eval_por_tipo_best_placas.py
+pip install ultralytics huggingface_hub
 ```
+
+**2. Baixar o modelo do HuggingFace**
+
+```python
+from huggingface_hub import hf_hub_download
+
+hf_hub_download(
+    repo_id="RodrigoRRC/license-plate-br-yolo26s",
+    filename="best_placas_v2.pt",
+    local_dir="."
+)
+```
+
+**3. Rodar inferência**
 
 ```python
 from ultralytics import YOLO
@@ -77,6 +92,12 @@ from ultralytics import YOLO
 modelo = YOLO("best_placas_v2.pt")
 resultados = modelo.predict(source="imagem.jpg", conf=0.5)
 resultados[0].show()
+```
+
+**4. (Opcional) Rodar avaliação completa por tipo de veículo**
+
+```bash
+python src/eval_por_tipo_best_placas.py
 ```
 
 ---
