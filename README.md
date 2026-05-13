@@ -140,7 +140,7 @@ python src/avaliacao/eval_por_tipo_best_placas.py
 
 Se usar este trabalho, cite o dataset original:
 
-> R. Laroca et al., "A Robust Real-Time Automatic License Plate Recognition Based on the YOLO Detector", IJCNN 2018.
+> R. Laroca, E. Severo, L. A. Zanlorensi, L. S. Oliveira, G. R. Gonçalves, W. R. Schwartz, D. Menotti, "A Robust Real-Time Automatic License Plate Recognition Based on the YOLO Detector," in 2018 International Joint Conference on Neural Networks (IJCNN), pp. 1-10, July 2018.
 
 ---
 
