@@ -99,7 +99,7 @@ resultados[0].show()
 **4. (Opcional) Rodar avaliação completa por tipo de veículo**
 
 ```bash
-python src/eval_por_tipo_best_placas.py
+python src/avaliacao/eval_por_tipo_best_placas.py
 ```
 
 ---
@@ -108,13 +108,17 @@ python src/eval_por_tipo_best_placas.py
 
 ```
 ├── src/
-│   ├── eval_por_tipo_best_placas.py     # Avaliação do modelo v2
-│   ├── eval_por_tipo_number_plate_s.py  # Avaliação do modelo baseline
-│   ├── fine_tuning_colab.py             # Fine-tuning no Google Colab
-│   ├── fine_tuning.py                   # Fine-tuning local/OCI
-│   ├── tune_colab.py                    # Busca genética no Colab
-│   ├── tune_kaggle.py                   # Busca genética no Kaggle
-│   └── gerar_grafico.py                 # Geração de gráficos de evolução
+│   ├── avaliacao/
+│   │   ├── eval_por_tipo_best_placas.py     # Avaliação do modelo v2
+│   │   └── eval_por_tipo_number_plate_s.py  # Avaliação do modelo baseline
+│   ├── treinamento/
+│   │   ├── fine_tuning.py                   # Fine-tuning local/OCI
+│   │   └── fine_tuning_colab.py             # Fine-tuning no Google Colab
+│   ├── otimizacao/
+│   │   ├── tune_colab.py                    # Busca genética no Colab
+│   │   └── tune_kaggle.py                   # Busca genética no Kaggle
+│   └── graficos/
+│       └── gerar_grafico.py                 # Geração de gráficos de evolução
 ├── Docs/
 │   ├── guia_colab.md
 │   ├── guia_kaggle.md
