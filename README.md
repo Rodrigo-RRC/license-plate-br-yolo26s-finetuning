@@ -148,6 +148,8 @@ Se usar este trabalho, cite o dataset original:
 
 AGPL-3.0 — herdada do modelo base de Muhammad Rizwan Munawar.
 
+**Uso não-comercial.** Os modelos deste repositório foram treinados no UFPR-ALPR Dataset, cujo uso é restrito a fins acadêmicos e não-comerciais. Esta restrição se estende aos modelos derivados. Para uso comercial, consulte os detentores do dataset original.
+
 ---
 
 ## Autor
