@@ -152,6 +152,12 @@ AGPL-3.0 — herdada do modelo base de Muhammad Rizwan Munawar.
 
 ---
 
+<p align="center">
+  <a href="https://rodrigo-rrc.github.io/Projetos_IA/" target="_blank">
+    <img src="https://img.shields.io/badge/⬅️ Voltar para o índice interativo-blue?style=for-the-badge" alt="Voltar para o índice interativo"/>
+  </a>
+</p>
+
 ## Autor
 
 Rodrigo Ribeiro Carvalho  
