@@ -76,3 +76,34 @@ for caixa in resultado.boxes:
 
 - `conf=0.5` → só mostra detecções com pelo menos 50% de confiança. Diminua para achar mais placas, aumente para ter menos alarmes falsos
 - O modelo **localiza** a placa (desenha a caixa). Ele **não lê** os caracteres
+
+---
+
+## Desenvolvimento do projeto
+
+O desenvolvimento foi dividido em três etapas, cada uma documentada em um notebook com as saídas gravadas:
+
+| Etapa | Notebook | Ambiente | Descrição |
+|---|---|---|---|
+| 1. Fine-tuning v1 | [`01_fine_tuning_v1_colab`](notebooks/01_fine_tuning_v1_colab.ipynb) | Google Colab · GPU T4 | Fine-tuning do modelo base com hiperparâmetros definidos manualmente |
+| 2. Otimização e fine-tuning v2 | [`02_tune_genetico_e_treino_v2_kaggle`](notebooks/02_tune_genetico_e_treino_v2_kaggle.ipynb) | Kaggle · GPU T4 | Busca evolutiva de hiperparâmetros (20 iterações × 3 épocas) seguida do fine-tuning com a melhor configuração (50 épocas) |
+| 3. Avaliação | [`03_avaliacao_base_v1_v2`](notebooks/03_avaliacao_base_v1_v2.ipynb) | Kaggle | Avaliação dos três modelos no conjunto de teste, sob as mesmas condições |
+
+### Configuração de treino
+
+Parâmetros comuns aos dois fine-tunings: 50 épocas, `imgsz=1280`, `batch=8`, `freeze=10` (backbone congelado) e `cos_lr=True`.
+
+Parâmetros que diferem entre as versões:
+
+| Parâmetro | v1 (definição manual) | v2 (busca evolutiva) |
+|---|---|---|
+| Otimizador | auto | AdamW |
+| `lr0` | 0,001 | 0,00285 |
+| `degrees` | 10 | 0,005 |
+| `perspective` | 0,001 | 0 |
+| `mosaic` | 1,0 | 0,61 |
+| `weight_decay` | 0,0005 | 0,0001 |
+| `dfl` | 1,5 | 1,23 |
+| `patience` | 10 | 15 |
+
+A busca evolutiva convergiu para uma rotação próxima de zero (`degrees`), diferente dos 10° definidos manualmente no v1. Também reduziu o `mosaic` e adotou o otimizador AdamW.
