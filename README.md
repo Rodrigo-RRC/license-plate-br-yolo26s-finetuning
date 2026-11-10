@@ -101,7 +101,7 @@ O desenvolvimento foi dividido em três etapas, cada uma documentada em um noteb
 
 Parâmetros comuns aos dois fine-tunings: 50 épocas, `imgsz=1280`, `batch=8`, `freeze=10` (backbone congelado) e `cos_lr=True`.
 
-Parâmetros que diferem entre as versões:
+**Diferenças relevantes**
 
 | Parâmetro | v1 (definição manual) | v2 |
 |---|---|---|
@@ -112,7 +112,17 @@ Parâmetros que diferem entre as versões:
 | `mosaic` | 1,0 | 0,61 |
 | `weight_decay` | 0,0005 | 0,0001 |
 | `dfl` | 1,5 | 1,23 |
+| `lrf` | 0,01 | 0,0145 |
 | `patience` | 10 | 15 (manual) |
+
+**Diferenças mínimas** (a busca praticamente manteve o valor padrão)
+
+| Parâmetro | v1 | v2 |
+|---|---|---|
+| `momentum` | 0,937 | 0,942 |
+| `box` | 7,5 | 7,51 |
+| `scale` | 0,5 | 0,495 |
+| `hsv_v` | 0,4 | 0,407 |
 
 A busca evolutiva convergiu para uma rotação próxima de zero (`degrees`), diferente dos 10° definidos manualmente no v1, e reduziu o `mosaic` de 1,0 para 0,61. O otimizador AdamW não fez parte da busca: foi definido manualmente para o v2.
 
