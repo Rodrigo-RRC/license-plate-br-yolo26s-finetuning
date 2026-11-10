@@ -101,10 +101,9 @@ O desenvolvimento foi dividido em três etapas, cada uma documentada em um noteb
 
 Parâmetros comuns aos dois fine-tunings: 50 épocas, `imgsz=1280`, `batch=8`, `freeze=10` (backbone congelado) e `cos_lr=True`.
 
-**Diferenças relevantes**
-
 | Parâmetro | v1 (definição manual) | v2 |
 |---|---|---|
+| **Diferenças relevantes** | | |
 | Otimizador | auto | AdamW (manual) |
 | `lr0` | 0,001 | 0,00285 |
 | `degrees` | 10 | 0,005 |
@@ -114,11 +113,7 @@ Parâmetros comuns aos dois fine-tunings: 50 épocas, `imgsz=1280`, `batch=8`, `
 | `dfl` | 1,5 | 1,23 |
 | `lrf` | 0,01 | 0,0145 |
 | `patience` | 10 | 15 (manual) |
-
-**Diferenças mínimas** (a busca praticamente manteve o valor padrão)
-
-| Parâmetro | v1 | v2 |
-|---|---|---|
+| **Diferenças mínimas** (valor praticamente mantido) | | |
 | `momentum` | 0,937 | 0,942 |
 | `box` | 7,5 | 7,51 |
 | `scale` | 0,5 | 0,495 |
