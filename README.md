@@ -109,3 +109,46 @@ Parâmetros que diferem entre as versões:
 | `patience` | 10 | 15 |
 
 A busca evolutiva convergiu para uma rotação próxima de zero (`degrees`), diferente dos 10° definidos manualmente no v1. Também reduziu o `mosaic` e adotou o otimizador AdamW.
+
+---
+
+## Dataset
+
+Treinamento e avaliação com o **UFPR-ALPR** (Laroca et al., 2018): 4.500 imagens em 1.920×1.080 px de 150 veículos (carros e motos), capturadas em cenários reais de trânsito.
+
+| Divisão | Imagens | Uso |
+|---|---|---|
+| Treino | 1.800 | Fine-tuning |
+| Validação | 900 | Seleção de hiperparâmetros e early stopping |
+| Teste | 1.800 | Avaliação final |
+
+O dataset é restrito a pesquisa acadêmica e não é redistribuído neste repositório. O acesso deve ser solicitado aos autores: [instruções](UFPR-ALPR%20dataset/README.md) · [página oficial](https://web.inf.ufpr.br/vri/databases/ufpr-alpr/)
+
+---
+
+## Modelo base
+
+[`number-plate-yolo26s`](https://platform.ultralytics.com/muhammadrizwanmunawar/datasets/number-plate), de Muhammad Rizwan Munawar: YOLO26s treinado em um dataset de placas de diversos países (licença AGPL-3.0).
+
+---
+
+## Licença
+
+**AGPL-3.0**, herdada do modelo base.
+
+⚠️ **Uso não comercial.** Os modelos foram treinados no UFPR-ALPR, cujo uso é restrito a fins acadêmicos e não comerciais. A restrição se estende aos modelos derivados.
+
+---
+
+## Citação
+
+Se utilizar este trabalho, cite o dataset original:
+
+> R. Laroca, E. Severo, L. A. Zanlorensi, L. S. Oliveira, G. R. Gonçalves, W. R. Schwartz, D. Menotti. *A Robust Real-Time Automatic License Plate Recognition Based on the YOLO Detector.* International Joint Conference on Neural Networks (IJCNN), 2018, pp. 1-10.
+
+---
+
+## Autor
+
+**Rodrigo Ribeiro Carvalho**
+[GitHub](https://github.com/Rodrigo-RRC) · [HuggingFace](https://huggingface.co/RodrigoRRC) · [LinkedIn](https://www.linkedin.com/in/rodrigo-ribeiro-datascience) · [Portfólio](https://rodrigo-rrc.github.io)
