@@ -103,16 +103,16 @@ Parâmetros comuns aos dois fine-tunings: 50 épocas, `imgsz=1280`, `batch=8`, `
 
 Parâmetros que diferem entre as versões:
 
-| Parâmetro | v1 (definição manual) | v2 (busca evolutiva) |
+| Parâmetro | v1 (definição manual) | v2 |
 |---|---|---|
-| Otimizador | auto | AdamW |
+| Otimizador | auto | AdamW (manual) |
 | `lr0` | 0,001 | 0,00285 |
 | `degrees` | 10 | 0,005 |
 | `perspective` | 0,001 | 0 |
 | `mosaic` | 1,0 | 0,61 |
 | `weight_decay` | 0,0005 | 0,0001 |
 | `dfl` | 1,5 | 1,23 |
-| `patience` | 10 | 15 |
+| `patience` | 10 | 15 (manual) |
 
 A busca evolutiva convergiu para uma rotação próxima de zero (`degrees`), diferente dos 10° definidos manualmente no v1, e reduziu o `mosaic` de 1,0 para 0,61. O otimizador AdamW não fez parte da busca: foi definido manualmente para o v2.
 
