@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" rx="16" fill="#ffffff"/>
+
+  <!-- Título -->
+  <text x="30" y="42" font-size="18" font-weight="700" fill="#212529">Fine-tuning com o dataset UFPR-ALPR</text>
+  <text x="30" y="64" font-size="13" fill="#5b6470">Métricas no mesmo conjunto de teste: 1.800 imagens de placas brasileiras (carros e motos)</text>
+
+  <!-- Modelo base -->
+  <rect x="30" y="140" width="210" height="140" rx="12" fill="#f1f3f5" stroke="#adb5bd" stroke-width="1.5"/>
+  <text x="135" y="172" text-anchor="middle" font-size="13" fill="#5b6470" letter-spacing="1">MODELO BASE</text>
+  <text x="135" y="198" text-anchor="middle" font-size="16" font-weight="600" fill="#212529">number-plate-yolo26s</text>
+  <text x="135" y="220" text-anchor="middle" font-size="13" fill="#495057">placas de vários países</text>
+  <text x="145" y="248" text-anchor="end" font-size="13" fill="#495057">mAP@50</text><text x="153" y="248" text-anchor="start" font-size="13" font-weight="700" fill="#495057">89,58%</text>
+  <text x="145" y="268" text-anchor="end" font-size="13" fill="#495057">mAP@50-95</text><text x="153" y="268" text-anchor="start" font-size="13" font-weight="700" fill="#495057">60,24%</text>
+
+  <!-- Ramo v1 -->
+  <path d="M240,185 C300,185 300,125 360,125 L640,125" fill="none" stroke="#5b6470" stroke-width="2" marker-end="url(#seta)"/>
+  <text x="500" y="113" text-anchor="middle" font-size="13" fill="#495057">hiperparâmetros escolhidos manualmente</text>
+  <rect x="650" y="80" width="270" height="100" rx="12" fill="#e7f5ff" stroke="#4dabf7" stroke-width="1.5"/>
+  <text x="785" y="108" text-anchor="middle" font-size="17" font-weight="700" fill="#1864ab">v1</text>
+  <text x="785" y="129" text-anchor="middle" font-size="13" fill="#1864ab">best_placas_v1.pt</text>
+  <text x="795" y="150" text-anchor="end" font-size="13" fill="#1864ab">mAP@50</text><text x="803" y="150" text-anchor="start" font-size="13" font-weight="700" fill="#1864ab">99,11%</text>
+  <text x="795" y="169" text-anchor="end" font-size="13" fill="#1864ab">mAP@50-95</text><text x="803" y="169" text-anchor="start" font-size="13" font-weight="700" fill="#1864ab">77,09%</text>
+
+  <!-- Ramo v2 -->
+  <path d="M240,235 C300,235 300,305 360,305 L380,305" fill="none" stroke="#5b6470" stroke-width="2" marker-end="url(#seta)"/>
+  <rect x="390" y="260" width="210" height="90" rx="12" fill="#fff4e6" stroke="#ffa94d" stroke-width="1.5"/>
+  <text x="495" y="293" text-anchor="middle" font-size="15" font-weight="600" fill="#a6510a">Busca genética</text>
+  <text x="495" y="315" text-anchor="middle" font-size="13" fill="#a6510a">20 tentativas × 3 épocas</text>
+  <text x="495" y="335" text-anchor="middle" font-size="13" fill="#a6510a">model.tune()</text>
+  <path d="M600,305 L640,305" fill="none" stroke="#5b6470" stroke-width="2" marker-end="url(#seta)"/>
+  <rect x="650" y="250" width="270" height="110" rx="12" fill="#ebfbee" stroke="#51cf66" stroke-width="2"/>
+  <text x="785" y="279" text-anchor="middle" font-size="17" font-weight="700" fill="#2b8a3e">v2 · modelo final</text>
+  <text x="785" y="300" text-anchor="middle" font-size="13" fill="#2b8a3e">best_placas_v2.pt</text>
+  <text x="795" y="322" text-anchor="end" font-size="13" fill="#2b8a3e">mAP@50</text><text x="803" y="322" text-anchor="start" font-size="13" font-weight="700" fill="#2b8a3e">98,33%</text>
+  <text x="795" y="342" text-anchor="end" font-size="13" fill="#2b8a3e">mAP@50-95</text><text x="803" y="342" text-anchor="start" font-size="13" font-weight="700" fill="#2b8a3e">82,03%</text>
+
+  <text x="480" y="400" text-anchor="middle" font-size="12" fill="#868e96">v1 e v2 partem do mesmo modelo base; a diferença está nos hiperparâmetros do treino</text>
+</svg>
