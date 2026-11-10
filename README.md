@@ -1,5 +1,6 @@
 # Detecção de Placas Veiculares Brasileiras com YOLO26s
 
+[![Testar online](https://img.shields.io/badge/▶%20Testar%20online-Playground-FF6F00?logo=huggingface&logoColor=white)](https://huggingface.co/spaces/RodrigoRRC/deteccao-placas-br)
 [![Modelo no HuggingFace](https://img.shields.io/badge/🤗%20Modelo-HuggingFace-yellow)](https://huggingface.co/RodrigoRRC/license-plate-br-yolo26s)
 [![Notebook no Kaggle](https://img.shields.io/badge/Notebook-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/rodrigorrc/03-avaliacao-base-v1-v2)
 [![Licença AGPL-3.0](https://img.shields.io/badge/Licença-AGPL--3.0-blue)](#licença)
@@ -41,6 +42,11 @@ Os três modelos foram avaliados no **mesmo conjunto de teste** do UFPR-ALPR (1.
 ---
 
 ## Como usar o modelo
+
+> [!TIP]
+> **Teste online, sem instalar nada:** [playground no HuggingFace](https://huggingface.co/spaces/RodrigoRRC/deteccao-placas-br). Envie uma foto, escolha o modelo (v1 ou v2) e veja as placas detectadas.
+
+Para usar o modelo no seu próprio código:
 
 **1. Clonar o repositório e instalar as dependências**
 
