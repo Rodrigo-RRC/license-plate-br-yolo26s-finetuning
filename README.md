@@ -42,10 +42,12 @@ Os três modelos foram avaliados no **mesmo conjunto de teste** do UFPR-ALPR (1.
 
 ## Como usar o modelo
 
-**1. Instalar as bibliotecas**
+**1. Clonar o repositório e instalar as dependências**
 
 ```bash
-pip install ultralytics huggingface_hub
+git clone https://github.com/Rodrigo-RRC/license-plate-br-yolo26s-finetuning.git
+cd license-plate-br-yolo26s-finetuning
+pip install -r requirements.txt
 ```
 
 **2. Baixar o modelo do HuggingFace**
