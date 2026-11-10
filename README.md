@@ -114,7 +114,7 @@ Parâmetros que diferem entre as versões:
 | `dfl` | 1,5 | 1,23 |
 | `patience` | 10 | 15 |
 
-A busca evolutiva convergiu para uma rotação próxima de zero (`degrees`), diferente dos 10° definidos manualmente no v1. Também reduziu o `mosaic` e adotou o otimizador AdamW.
+A busca evolutiva convergiu para uma rotação próxima de zero (`degrees`), diferente dos 10° definidos manualmente no v1, e reduziu o `mosaic` de 1,0 para 0,61. O otimizador AdamW não fez parte da busca: foi definido manualmente para o v2.
 
 ---
 
