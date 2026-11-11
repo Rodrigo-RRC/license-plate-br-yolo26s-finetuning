@@ -89,7 +89,7 @@ for caixa in resultado.boxes:
 
 ## Desenvolvimento do projeto
 
-O desenvolvimento foi dividido em três etapas, cada uma documentada em um notebook com as saídas gravadas:
+O desenvolvimento foi dividido em três etapas, cada uma documentada em um notebook com as saídas gravadas. As decisões e os critérios de avaliação estão detalhados em [**Metodologia**](Docs/metodologia.md).
 
 | Etapa | Notebook | Ambiente | Descrição |
 |---|---|---|---|
